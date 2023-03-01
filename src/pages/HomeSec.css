@@ -1,0 +1,88 @@
+#Home {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("./images/6697029.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-user-select: none; /* Webkit browsers */
+  -moz-user-select: none; /* Mozilla Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Standard */
+}
+#Home p {
+  -webkit-user-select: none; /* Webkit browsers */
+  -moz-user-select: none; /* Mozilla Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Standard */
+}
+
+#terminal {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  z-index: 2;
+  box-shadow: 0 5px 9px 2px black;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+#projects,
+#contact {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  z-index: 2;
+  background-color: #212121;
+}
+.terminalBar,
+.projectBar,
+.contactBar {
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+  height: 5%;
+  background-color: #1b1b1b;
+  color: white;
+}
+.terminalContent {
+  width: 100%;
+  height: 95%;
+  display: flex;
+  justify-content: center;
+  overflow-y: scroll;
+}
+.projectsContent,
+.contactContent {
+  width: 100%;
+  height: 95%;
+  color: #fff;
+  padding: 1rem;
+  overflow-y: scroll;
+}
+div::-webkit-scrollbar {
+  width: 0.2rem;
+}
+div::-webkit-scrollbar-track {
+  background: #212121;
+}
+div::-webkit-scrollbar-thumb {
+  background: var(--bar-color);
+  border-radius: 5rem;
+}
+
+#closeWindow:hover {
+  transition: 0.7s ease;
+  color: #4caf50;
+}
+
+#hideWindow:hover {
+  transition: 0.7s ease;
+  color: var(--main-color);
+}
+
+#resizeWindow:hover {
+  transition: 0.7s ease;
+  color: var(--second-color);
+}

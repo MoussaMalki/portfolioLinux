@@ -1,0 +1,78 @@
+header {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* replace with your desired dark color */
+
+  display: flex;
+  justify-content: space-between;
+  padding: 2vh 3vw;
+}
+/* first box */
+.boxOne img {
+  width: 2.5rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+.boxOne p {
+  color: #fff;
+  font-size: clamp(0.9rem, 1rem, 1.1rem);
+}
+/* second box */
+.boxTwo i {
+  color: #c9caca;
+  font-size: 2rem;
+}
+#turnOff {
+  color: #c9caca;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+#turnOff:hover {
+  transition: 0.7s ease;
+  color: var(--main-color);
+}
+.custom-dropdown {
+  position: relative;
+  margin-right: 0.5rem;
+}
+
+.selected-option {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  padding: 0.2rem 0.5rem;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+}
+
+.selected-option .arrow {
+  margin-left: 10px;
+  position: relative;
+  top: 2px;
+}
+
+.options {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  padding: 0.2rem 0.7rem;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  z-index: 3;
+}
+
+.options li {
+  list-style: none;
+  padding: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.options li:hover {
+  background-color: var(--j);
+}
