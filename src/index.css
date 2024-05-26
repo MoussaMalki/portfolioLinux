@@ -76,6 +76,12 @@ html::-webkit-scrollbar-thumb {
   background-color: #1c1c1c;
 }
 
+#loading-screen {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
 .ring {
   position: relative;
   width: 150px;

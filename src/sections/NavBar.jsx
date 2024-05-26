@@ -1,10 +1,9 @@
 import "./NavBar.css";
-import ThemeSwitch from "../components/ThemeSwitch";
 import { useState, useEffect } from "react";
 
 const NavBar = () => {
-  // get date and display it
-  const date = new Date();
+  // get date and display it on the right of the header
+
   const options = {
     month: "short",
     day: "numeric",
@@ -12,16 +11,24 @@ const NavBar = () => {
     minute: "numeric",
     hour12: true,
   };
-  const formattedDate = date.toLocaleString("en-US", options);
 
-  const [selectedOption, setSelectedOption] = useState("en");
-  const [showOptions, setShowOptions] = useState(false);
+  const [formattedDate, setFormattedDate] = useState();
+ 
+  setInterval(() => {
+    let date = new Date();
+    setFormattedDate(date.toLocaleString("en-US", options))
+  }, 1000);
 
+  // checking if the terminal paragraph typing animation is still going on
   const handleClick = () => {
     if (localStorage.getItem("typing") === "true") {
       setShowOptions(!showOptions);
     }
   };
+
+  // listen for language change and save in the local storage
+  const [selectedOption, setSelectedOption] = useState("en");
+  const [showOptions, setShowOptions] = useState(false);
 
   useEffect(() => {
     if (localStorage.getItem("lang") === "ar") {
@@ -39,13 +46,15 @@ const NavBar = () => {
 
   return (
     <header>
-      <div className="boxOne" style={{ display: "flex", alignItems: "center" }}>
-        <img src="./images/appLogo.png" alt="moussa malki's portfolio logo" />
+      <div
+        className="headerLeft"
+        style={{ display: "flex", alignItems: "center" }}
+      >
+        <img src="./images/logo.png" alt="moussa malki's portfolio logo" />
         <p>{formattedDate}</p>
       </div>
-
       <div
-        className="boxThree"
+        className="headerRight"
         style={{ display: "flex", alignItems: "center" }}
       >
         <div className="custom-dropdown">

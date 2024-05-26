@@ -1,6 +1,6 @@
 import "./index.css";
-import NavBar from "./pages/NavBar";
-import HomeSec from "./pages/HomeSec";
+import NavBar from "./sections/NavBar";
+import HomeSec from "./sections/HomeSec";
 import { useState, useEffect } from "react";
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 2500);
 
     return () => clearTimeout(timer);
   }, []);
@@ -17,8 +17,7 @@ function App() {
   return (
     <>
       <div className="App">
-        {loading ? (
-          <div id="loading-screen">
+          <div id="loading-screen" style={loading?{display: "intial"}:{display: "none"}}>
             <div
               className="spinner"
               style={{
@@ -41,15 +40,14 @@ function App() {
                   transform: "translate(-50%)",
                 }}
               >
-                Loading
+                Loading...
               </p>
             </div>
           </div>
-        ) : (
+     
           <div>
             <HomeSec />
           </div>
-        )}
       </div>
     </>
   );

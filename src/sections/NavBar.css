@@ -1,39 +1,26 @@
 header {
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* replace with your desired dark color */
-
+  background-color: rgba(0,
+      0,
+      0,
+      0.5);
   display: flex;
   justify-content: space-between;
   padding: 2vh 3vw;
 }
-/* first box */
-.boxOne img {
+
+/* left header */
+.headerLeft img {
   width: 2.5rem;
   cursor: pointer;
   margin-right: 0.5rem;
 }
-.boxOne p {
+
+.headerLeft p {
   color: #fff;
   font-size: clamp(0.9rem, 1rem, 1.1rem);
 }
-/* second box */
-.boxTwo i {
-  color: #c9caca;
-  font-size: 2rem;
-}
-#turnOff {
-  color: #c9caca;
-  font-size: 1.3rem;
-  cursor: pointer;
-}
-#turnOff:hover {
-  transition: 0.7s ease;
-  color: var(--main-color);
-}
+
+/* right box */
 .custom-dropdown {
   position: relative;
   margin-right: 0.5rem;
