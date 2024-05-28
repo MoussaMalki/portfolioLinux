@@ -1,6 +1,6 @@
 {
   "en": {
-    "appNames": { "f": "Terminal", "s": "Email", "t": "Projects" },
+    "appNames": { "f": "Terminal", "s": "Email", "t": "About me" },
     "terminalCommands": {"owner": "Moussa@portfolio" ,"intro": "Welcome to my portfolio, I'm Moussa Malki, please type 'help' to see a list of available commands",
     "help": "/about /projects /contact #clear #randomQuote #randomQuestion",
     "about": "Hello, I'm Moussa Malki, a front-end developer from Morocco. I've been working in web development for about a year, and in that time, I've become proficient in several technologies, including JavaScript, CSS, HTML, React, Firebase, and Framer Motion. I'm passionate about creating beautiful and functional user experiences, and I love using my skills to bring digital projects to life. In my free time, I enjoy exploring new technologies, practicing my coding skills, and keeping up with the latest trends in web development. Thanks for stopping by my website, and feel free to get in touch if you have any questions or would like to collaborate on a project."

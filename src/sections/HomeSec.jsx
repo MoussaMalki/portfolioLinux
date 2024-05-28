@@ -108,7 +108,7 @@ const HomeSec = () => {
     if (newY + ref.current.offsetHeight > window.innerHeight * 0.9)
       newY = window.innerHeight * 0.9 - ref.current.offsetHeight;
     if (newX < 0) newX = 0;
-    if (newY < 65) newY = 65;
+    if (newY < 83) newY = 83;
     if (newX + ref.current.offsetWidth > window.innerWidth)
       newX = window.innerWidth - ref.current.offsetWidth;
     if (newY + ref.current.offsetHeight > window.innerHeight)
@@ -123,7 +123,7 @@ const HomeSec = () => {
     if (newY + ref2.current.offsetHeight > window.innerHeight * 0.9)
       newY = window.innerHeight * 0.9 - ref2.current.offsetHeight;
     if (newX < 0) newX = 0;
-    if (newY < 65) newY = 65;
+    if (newY < 83) newY = 83;
     if (newX + ref2.current.offsetWidth > window.innerWidth)
       newX = window.innerWidth - ref2.current.offsetWidth;
     if (newY + ref2.current.offsetHeight > window.innerHeight)
@@ -138,7 +138,7 @@ const HomeSec = () => {
     if (newY + ref3.current.offsetHeight > window.innerHeight * 0.9)
       newY = window.innerHeight * 0.9 - ref3.current.offsetHeight;
     if (newX < 0) newX = 0;
-    if (newY < 65) newY = 65;
+    if (newY < 83) newY = 83;
     if (newX + ref3.current.offsetWidth > window.innerWidth)
       newX = window.innerWidth - ref3.current.offsetWidth;
     if (newY + ref3.current.offsetHeight > window.innerHeight)
@@ -194,10 +194,11 @@ const HomeSec = () => {
             }
           }}
         >
-          <i
-            className="bx bxs-terminal"
-            style={{ fontSize: "3.5rem", color: "var(--second-color)" }}
-          ></i>
+          <img
+            src="/public/images/terminal.png"
+            style={{ height: "3rem", marginBottom: "0.5rem" }}
+            alt=""
+          />
           <p style={{ fontSize: "1rem", color: "#fff", weight: "700" }}>
             {appNames.f}
           </p>
@@ -223,10 +224,12 @@ const HomeSec = () => {
             }
           }}
         >
-          <i
-            className="bx bxl-telegram"
-            style={{ fontSize: "3.5rem", color: "#FFB84C" }}
-          ></i>
+          <img
+            src="/public/images/gmail.png"
+            style={{ height: "2.7rem", marginBottom: "0.6rem", padding: "0 0.3rem" }}
+            alt=""
+          />
+
           <p style={{ fontSize: "1rem", color: "#fff", weight: "700" }}>
             {appNames.s}
           </p>
@@ -252,10 +255,12 @@ const HomeSec = () => {
             }
           }}
         >
-          <i
-            className="bx bx-code-alt"
-            style={{ fontSize: "3.5rem", color: "var(--main-color)" }}
-          ></i>
+          <img
+            src="/public/images/folder.png"
+            style={{ height: "2.7rem", marginBottom: "0.6rem" }}
+            alt=""
+          />
+
           <p style={{ fontSize: "1rem", color: "#fff", weight: "700" }}>
             {appNames.t}
           </p>
