@@ -39,8 +39,9 @@ function App() {
                   left: "50%",
                   transform: "translate(-50%)",
                 }}
+                className="fade-in"
               >
-                Loading...
+              Welcome
               </p>
             </div>
           </div>

@@ -82,6 +82,15 @@ html::-webkit-scrollbar-thumb {
   width: 100%;
 }
 
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 2s ease-in-out;
+}
+
 .ring {
   position: relative;
   width: 150px;

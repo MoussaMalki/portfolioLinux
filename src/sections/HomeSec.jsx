@@ -15,22 +15,6 @@ const HomeSec = () => {
   const [projectClicked, setProjectClicked] = useState(false);
   const [contactClicked, setContactClicked] = useState(false);
 
-  // for moving the elements
-  const [position, setPosition] = useState({ x: 50, y: 100 });
-  const [dragging, setDragging] = useState(false);
-  const ref = useRef(null);
-  const [position2, setPosition2] = useState({ x: 50, y: 300 });
-  const [dragging2, setDragging2] = useState(false);
-  const ref2 = useRef(null);
-  const [position3, setPosition3] = useState({ x: 50, y: 200 });
-  const [dragging3, setDragging3] = useState(false);
-  const ref3 = useRef(null);
-
-  // for the window buttons
-  const [isItHidden, setIsItHidden] = useState(true);
-  const [isItHidden2, setIsItHidden2] = useState(true);
-  const [isItHidden3, setIsItHidden3] = useState(true);
-
   // for changing the language on load and when the local storage gets updated
   useEffect(() => {
     changeLang();
@@ -54,6 +38,23 @@ const HomeSec = () => {
       setCurrentLang("en");
     }
   }
+
+  // for moving the elements
+  const [position, setPosition] = useState({ x: 50, y: 100 });
+  const [dragging, setDragging] = useState(false);
+  const ref = useRef(null);
+  const [position2, setPosition2] = useState({ x: 50, y: 300 });
+  const [dragging2, setDragging2] = useState(false);
+  const ref2 = useRef(null);
+  const [position3, setPosition3] = useState({ x: 50, y: 200 });
+  const [dragging3, setDragging3] = useState(false);
+  const ref3 = useRef(null);
+
+  // for the window buttons
+  const [isItHidden, setIsItHidden] = useState(true);
+  const [isItHidden2, setIsItHidden2] = useState(true);
+  const [isItHidden3, setIsItHidden3] = useState(true);
+
   // event listeners for the mouse grabbing
   useEffect(() => {
     document.addEventListener("mouseup", stopDragging);
@@ -226,7 +227,11 @@ const HomeSec = () => {
         >
           <img
             src="/public/images/gmail.png"
-            style={{ height: "2.7rem", marginBottom: "0.6rem", padding: "0 0.3rem" }}
+            style={{
+              height: "2.7rem",
+              marginBottom: "0.6rem",
+              padding: "0 0.3rem",
+            }}
             alt=""
           />
 
@@ -304,7 +309,7 @@ const HomeSec = () => {
 };
 
 const TerminalContainer = (props) => {
-  const [position, setPosition] = useState({ x: 20, y: 100 });
+  const [position, setPosition] = useState({ x: 20, y: 200 });
   const [dragging, setDragging] = useState(false);
   const ref = useRef(null);
   const [resize, setResize] = useState(false);
@@ -344,7 +349,7 @@ const TerminalContainer = (props) => {
     if (newY + ref.current.offsetHeight > window.innerHeight * 1)
       newY = window.innerHeight * 1 - ref.current.offsetHeight;
     if (newX < 0) newX = 0;
-    if (newY < 65) newY = 65;
+    if (newY < 83) newY = 83;
     if (newX + ref.current.offsetWidth > window.innerWidth)
       newX = window.innerWidth - ref.current.offsetWidth;
     if (newY + ref.current.offsetHeight > window.innerHeight)
@@ -366,26 +371,10 @@ const TerminalContainer = (props) => {
         width: resize === false ? "90%" : "100%",
         height: resize === false ? "35rem" : "100vh",
       }}
-      onMouseDown={startDragging}
     >
-      <div className="terminalBar">
+      <div className="terminalBar" onMouseDown={startDragging}>
         <div>Moussa@portfolio</div>
         <div style={{ display: "flex", alignItems: "center" }}>
-          <i
-            className="bx bx-minus"
-            id="closeWindow"
-            style={{
-              fontSize: "1.5rem",
-              cursor: "pointer",
-            }}
-            onClick={() => {
-              if (localStorage.getItem("typing") === "true") {
-                props.changeHiddenState(true);
-              }
-
-              props.changeTerminalIsClicked(!props.terminalIsClicked);
-            }}
-          ></i>
           <i
             className="bx bx-square"
             id="resizeWindow"
@@ -459,7 +448,7 @@ const ProjectsContainer = (props) => {
     if (newY + ref.current.offsetHeight > window.innerHeight * 1)
       newY = window.innerHeight * 1 - ref.current.offsetHeight;
     if (newX < 0) newX = 0;
-    if (newY < 65) newY = 65;
+    if (newY < 83) newY = 83;
     if (newX + ref.current.offsetWidth > window.innerWidth)
       newX = window.innerWidth - ref.current.offsetWidth;
     if (newY + ref.current.offsetHeight > window.innerHeight)
@@ -481,24 +470,10 @@ const ProjectsContainer = (props) => {
         width: resize === false ? "90%" : "100%",
         height: resize === false ? "35rem" : "100vh",
       }}
-      onMouseDown={startDragging}
     >
-      <div className="projectBar">
+      <div className="projectBar" onMouseDown={startDragging}>
         <div>Moussa@portfolio</div>
         <div style={{ display: "flex", alignItems: "center" }}>
-          <i
-            className="bx bx-minus"
-            id="closeWindow"
-            style={{
-              fontSize: "1.5rem",
-              cursor: "pointer",
-            }}
-            onClick={() => {
-              props.changeHiddenState(true);
-
-              props.changeTerminalIsClicked(!props.terminalIsClicked);
-            }}
-          ></i>
           <i
             className="bx bx-square"
             id="resizeWindow"
@@ -568,7 +543,7 @@ const ContactContainer = (props) => {
     if (newY + ref.current.offsetHeight > window.innerHeight * 1)
       newY = window.innerHeight * 1 - ref.current.offsetHeight;
     if (newX < 0) newX = 0;
-    if (newY < 65) newY = 65;
+    if (newY < 83) newY = 83;
     if (newX + ref.current.offsetWidth > window.innerWidth)
       newX = window.innerWidth - ref.current.offsetWidth;
     if (newY + ref.current.offsetHeight > window.innerHeight)
@@ -590,24 +565,10 @@ const ContactContainer = (props) => {
         width: resize === false ? "90%" : "100%",
         height: resize === false ? "35rem" : "100vh",
       }}
-      onMouseDown={startDragging}
     >
-      <div className="contactBar">
+      <div className="contactBar" onMouseDown={startDragging}>
         <div>Moussa@portfolio</div>
         <div style={{ display: "flex", alignItems: "center" }}>
-          <i
-            className="bx bx-minus"
-            id="closeWindow"
-            style={{
-              fontSize: "1.5rem",
-              cursor: "pointer",
-            }}
-            onClick={() => {
-              props.changeHiddenState(true);
-
-              props.changeTerminalIsClicked(!props.terminalIsClicked);
-            }}
-          ></i>
           <i
             className="bx bx-square"
             id="resizeWindow"

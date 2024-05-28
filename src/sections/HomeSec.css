@@ -17,33 +17,28 @@
   user-select: none; /* Standard */
 }
 
-#terminal {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  z-index: 2;
-  box-shadow: 0 5px 9px 2px black;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
+
 #projects,
-#contact {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+#contact, #terminal {
+border-radius: 1rem;
   z-index: 2;
-  background-color: #212121;
+  box-shadow: 0 10px 10px rgba(255, 255, 255, 0.1); /* Adjust the values to change the shadow effect */
+overflow: hidden;
 }
 .terminalBar,
 .projectBar,
 .contactBar {
   width: 100%;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 0.5rem;
-  height: 5%;
-  background-color: #1b1b1b;
+  height: 6%;
+  background-color: rgba(153, 0, 255, 0.2); /* Red color with 50% opacity */
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(5rem);
   color: white;
 }
 .terminalContent {
@@ -54,12 +49,15 @@
   overflow-y: scroll;
 }
 .projectsContent,
-.contactContent {
+.contactContent, .terminalContent {
   width: 100%;
   height: 95%;
   color: #fff;
-  padding: 1rem;
+  padding: 1rem 0.5rem;
   overflow-y: scroll;
+  background-color: #212121;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 div::-webkit-scrollbar {
   width: 0.2rem;
